@@ -4,6 +4,12 @@ import threading
 from langdetect import detect
 
 
+def _from_rgb(rgb):
+    """translates an rgb tuple of int to a tkinter friendly color code
+    """
+    return "#%02x%02x%02x" % rgb
+
+
 class ScrollableFrame(ttk.Frame):
     def __init__(self, container, *args, **kwargs):
         super().__init__(container, **kwargs)
@@ -61,18 +67,18 @@ class ScrollWindow2:
         self.root = tk.Tk()
 
         # self.root.geometry("600x700")
-        self.root.configure(bg='pink')
+        self.root.configure(bg=_from_rgb((185, 231, 250)))
 
         scrollbar = tk.Scrollbar(self.root)
         scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-        scrollbar.configure(bg='black')
+        scrollbar.configure(bg=_from_rgb((185, 231, 250)))
 
-        self.textbox = tk.Text(self.root, font=("Ariel", 16), width=50, height=30, borderwidth=0)
+        self.textbox = tk.Text(self.root, font=('Ariel', 16), width=50, height=30, borderwidth=0)
         self.textbox.pack(fill=tk.Y, padx=10, pady=10)
-        self.textbox.configure(bg='pink', fg='black')
+        self.textbox.configure(bg=_from_rgb((185, 231, 250)), fg=_from_rgb((26, 115, 232)))
 
-        self.textbox.tag_configure('english', justify='left')
-        self.textbox.tag_configure('hebrew', justify='right')
+        self.textbox.tag_configure('english', justify='left', font=("Yu Gothic UI Semibold", 16))
+        self.textbox.tag_configure('hebrew', justify='right', font=("Ariel", 16))
 
         self.textbox.config(yscrollcommand=scrollbar.set)
         scrollbar.config(command=self.textbox.yview)
