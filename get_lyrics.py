@@ -32,7 +32,7 @@ def get_lyrics2(song_name, artist, english=True):
 
 
 def valid(lyrics):
-    invalids = ['genius', 'musixmatch', 'lyricstranslate.com', 'youtube', 'shironet', 'tab4u']
+    invalids = ['azlyrics', 'genius', 'musixmatch', 'lyricstranslate.com', 'youtube', 'shironet', 'tab4u']
     lower_lyrics = lyrics.lower()
     for invalid in invalids:
         if invalid in lower_lyrics:
