@@ -7,7 +7,7 @@ import artist_translation
 
 
 SPOTIFY_GET_CURRENT_TRACK_URL = 'https://api.spotify.com/v1/me/player/currently-playing'
-ACCESS_TOKEN = 'BQCwBySQW7Xio-1YDm_wuU2Eq_xzuuC2xHvt_Q4PwUSchdJ-1fUAzojTI5I_83k9vApGR6yGfMOQovuY5Kmidix-54Fm_jX02Rogm2AMF1LJOg7hCG5SsI59LpOldpCkfg8OtJfuBqlmaTNPjCo0pDY9ne1kpFGk3z1jFnG9'
+ACCESS_TOKEN = 'BQC8NzuGXj15KsSnoGSx14sU9HOTC61WPCyHqWV6BESLhTTwXiU0NjtqORGMk2fgoY1bYXYFok1woEPqRftlp7s5XpFOoIDn2Pchh3ihaY7-xT2EYxNUcF_yN65-YWHeHAtIyndJeIPPV7DG17nH_voLdAVsSPVA5aX1QtdZ'
 
 
 def get_current_track(access_token):
